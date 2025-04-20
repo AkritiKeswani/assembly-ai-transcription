@@ -107,7 +107,6 @@ export function TranscriptionForm() {
 
         <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
           <button
-            type="submit"
             onClick={handleSubmit}
             className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
               loading || !file

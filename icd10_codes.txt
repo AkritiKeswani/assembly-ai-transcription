@@ -1,0 +1,9 @@
+# Diabetes-related ICD-10 codes
+E083311  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, right eye
+E083312  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, left eye
+E083313  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, bilateral
+E083319  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye
+E083391  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, right eye
+E083392  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, left eye
+E083393  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, bilateral
+E083399  Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye 
