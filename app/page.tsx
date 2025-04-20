@@ -1,8 +1,16 @@
 'use client';
 
+import { useState } from 'react';
 import { TranscriptionForm } from "@/components/transcription-form"
+import MedicalAnalysis from '@/components/MedicalAnalysis';
 
 export default function Home() {
+  const [transcriptionText, setTranscriptionText] = useState('');
+
+  const handleTranscriptionComplete = (text: string) => {
+    setTranscriptionText(text);
+  };
+
   return (
     <main className="min-h-screen bg-white py-12 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
@@ -11,7 +19,13 @@ export default function Home() {
           <p className="text-sm text-gray-500">Powered by AssemblyAI</p>
         </div>
         
-        <TranscriptionForm />
+        <TranscriptionForm onTranscriptionComplete={handleTranscriptionComplete} />
+        
+        {transcriptionText && (
+          <div className="mt-8">
+            <MedicalAnalysis transcription={transcriptionText} />
+          </div>
+        )}
       </div>
     </main>
   );

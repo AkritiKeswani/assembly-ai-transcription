@@ -6,7 +6,11 @@ import { Loader2, Upload, Mic } from "lucide-react"
 import { transcribeAudio } from "@/app/actions"
 import { LemurAnalysis } from "./lemur-analysis"
 
-export function TranscriptionForm() {
+interface TranscriptionFormProps {
+  onTranscriptionComplete: (text: string) => void;
+}
+
+export function TranscriptionForm({ onTranscriptionComplete }: TranscriptionFormProps) {
   const [file, setFile] = useState<File | null>(null)
   const [transcript, setTranscript] = useState<string | null>(null)
   const [transcriptId, setTranscriptId] = useState<string | null>(null)
@@ -47,8 +51,10 @@ export function TranscriptionForm() {
         if (result.error) {
           setError(result.error)
         } else {
-          setTranscript(result.transcript || null)
+          const transcriptText = result.transcript || '';
+          setTranscript(transcriptText)
           setTranscriptId(result.transcript_id || null)
+          onTranscriptionComplete(transcriptText)
         }
 
         setLoading(false)
